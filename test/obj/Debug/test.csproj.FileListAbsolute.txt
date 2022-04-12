@@ -1,0 +1,12 @@
+C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\test.exe.config
+C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\test.exe
+C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\test.pdb
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.csproj.AssemblyReference.cache
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.csproj.SuggestedBindingRedirects.cache
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.csproj.GenerateResource.cache
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.exe
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.pdb
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.Menu.resources
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.GameForm.resources
