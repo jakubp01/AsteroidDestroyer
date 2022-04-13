@@ -10,14 +10,14 @@ namespace test
     public  class Bullet:GameObject
     {
         Image _img;
-        public int _bulletSpeed { get; set; }
+         int _bulletSpeed { get; set; }
         
         
 
         public Bullet(float locationX, float locationY)
         {
             _bulletSpeed = 5;
-            _img = Image.FromFile(@"C:\Users\jakub\Desktop\Projekty\WF\test\test\Items\blt.png");
+            _img = Image.FromFile(@"Items\blt.png");
             x = locationX;
             y = locationY;
             

@@ -66,7 +66,27 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PutNicknameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PutNicknameForm.Designer.cs">
+      <DependentUpon>PutNicknameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rocket.cs" />
+    <Compile Include="Scoreboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scoreboard.Designer.cs">
+      <DependentUpon>Scoreboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreboardDbDataSet.cs">
+      <DependentUpon>ScoreboardDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreboardDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScoreboardDbDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +103,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PutNicknameForm.resx">
+      <DependentUpon>PutNicknameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scoreboard.resx">
+      <DependentUpon>Scoreboard.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,16 +118,35 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ScoreboardDbDataSet.xsc">
+      <DependentUpon>ScoreboardDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ScoreboardDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScoreboardDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScoreboardDbDataSet.xss">
+      <DependentUpon>ScoreboardDbDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Items\asteoird.png" />
-    <Content Include="Items\blt.png" />
-    <Content Include="Items\rocketWbg.png" />
-    <Content Include="Items\space.jpg" />
+    <Content Include="Items\asteroid.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Items\blt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Items\rocketWbg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Items\space.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

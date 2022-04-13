@@ -33,6 +33,8 @@
             this.ammoLabel = new System.Windows.Forms.Label();
             this.pointsLabel = new System.Windows.Forms.Label();
             this.LifesCounterLabel = new System.Windows.Forms.Label();
+            this.BackToMenubtn = new System.Windows.Forms.Button();
+            this.LevelLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // moveTimer
@@ -77,12 +79,39 @@
             this.LifesCounterLabel.TabIndex = 2;
             this.LifesCounterLabel.Text = "Lifes: 3";
             // 
+            // BackToMenubtn
+            // 
+            this.BackToMenubtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackToMenubtn.Font = new System.Drawing.Font("Impact", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.BackToMenubtn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.BackToMenubtn.Location = new System.Drawing.Point(229, 614);
+            this.BackToMenubtn.Name = "BackToMenubtn";
+            this.BackToMenubtn.Size = new System.Drawing.Size(174, 64);
+            this.BackToMenubtn.TabIndex = 4;
+            this.BackToMenubtn.Text = "BACK TO MENU";
+            this.BackToMenubtn.UseVisualStyleBackColor = false;
+            this.BackToMenubtn.Click += new System.EventHandler(this.BackToMenubtn_Click);
+            // 
+            // LevelLabel
+            // 
+            this.LevelLabel.AutoSize = true;
+            this.LevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LevelLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.LevelLabel.Location = new System.Drawing.Point(1, 59);
+            this.LevelLabel.Name = "LevelLabel";
+            this.LevelLabel.Size = new System.Drawing.Size(75, 25);
+            this.LevelLabel.TabIndex = 5;
+            this.LevelLabel.Text = "Level 0";
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::test.Properties.Resources.space;
             this.ClientSize = new System.Drawing.Size(634, 761);
+            this.Controls.Add(this.LevelLabel);
+            this.Controls.Add(this.BackToMenubtn);
             this.Controls.Add(this.LifesCounterLabel);
             this.Controls.Add(this.pointsLabel);
             this.Controls.Add(this.ammoLabel);
@@ -107,6 +136,8 @@
         private System.Windows.Forms.Label ammoLabel;
         private System.Windows.Forms.Label pointsLabel;
         private System.Windows.Forms.Label LifesCounterLabel;
+        private System.Windows.Forms.Button BackToMenubtn;
+        private System.Windows.Forms.Label LevelLabel;
     }
 }
 

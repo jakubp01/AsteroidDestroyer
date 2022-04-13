@@ -19,7 +19,7 @@ namespace test
         public Asteroid()
         {
             
-            _img = Image.FromFile(@"C:\Users\jakub\Desktop\Projekty\WF\GameGame\GameGame\Resources\asteroid.png");
+            _img = Image.FromFile(@"Items\asteroid.png");
             this.y = 5;
             this.x= random.Next(620);
             _rotate = random.Next(360);

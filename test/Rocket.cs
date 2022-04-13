@@ -16,7 +16,7 @@ namespace test
         int _y = 650;
         public Rocket(Cartridge cartridge)
         {
-            _rocketImage = Image.FromFile(@"C:\Users\jakub\Desktop\Projekty\WF\test\test\Items\rocketWbg.png");
+            _rocketImage = Image.FromFile(@"Items\rocketWbg.png");
             this.x = _x ;
             this.y = _y;
             _cartridge = cartridge;
@@ -34,10 +34,16 @@ namespace test
         {
             if (side == "right")
             {
-                x += 12;
+                if (x < 620)
+                {
+                    x += 12;
+                }
             }
             else
+                if (x > 50)
+            {
                 x -= 12;
+            }
         }
         public void Shoot()
         {

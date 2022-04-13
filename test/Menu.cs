@@ -22,14 +22,23 @@ namespace test
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            GameForm gameForm = new GameForm();
             
-            gameForm.Show();
+            Scoreboard scoreboardcs = new Scoreboard();
+            scoreboardcs.Show();
             
         }
 
+        private void Playbtn_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            GameForm gameForm = new GameForm();
+
+            gameForm.Show();
+            
+        }
     }
 }

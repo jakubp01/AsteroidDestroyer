@@ -13,6 +13,7 @@ namespace test
     public partial class GameForm : Form
     {
         Game _game;
+       
         public GameForm()
         {
             InitializeComponent();
@@ -20,23 +21,33 @@ namespace test
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            BackToMenubtn.Hide();
             _game = new Game();
+            
         }
 
         private void moveTimer_Tick(object sender, EventArgs e)
         {
-            if(_game.isGameOver())
+            if (_game._putNicknameForm.isOpen)
             {
-                moveTimer.Stop();
-            }
-            _game.ShowStatistic(pointsLabel,ammoLabel,LifesCounterLabel);
-            _game.GameLevelSetup();
-            _game.MakeAsteroid();
-            _game.AsteroidMovment();
-            _game.BulletMovment();
-           
 
-            Invalidate();
+            }
+            else
+            {
+                if (_game.isGameOver())
+                {
+                    BackToMenubtn.Show();
+                    moveTimer.Stop();
+                }
+                _game.ShowStatistic(pointsLabel, ammoLabel, LifesCounterLabel,LevelLabel);
+                _game.GameLevelSetup();
+                _game.MakeAsteroid();
+                _game.AsteroidMovment();
+                _game.BulletMovment();
+
+
+                Invalidate();
+            }
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -49,5 +60,11 @@ namespace test
             _game.RocketControl(e);
         }
 
+        private void BackToMenubtn_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
     }
 }

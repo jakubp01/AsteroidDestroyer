@@ -10,3 +10,9 @@ C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.exe
 C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.pdb
 C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.Menu.resources
 C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.GameForm.resources
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.Scoreboard.resources
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.PutNicknameForm.resources
+C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Items\blt.png
+C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Items\rocketWbg.png
+C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Items\space.jpg
+C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Items\asteroid.png

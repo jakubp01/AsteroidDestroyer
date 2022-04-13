@@ -9,27 +9,34 @@ namespace test
 {
     internal class Game
     {
-       public Random _random;
-        public int _randomOfAppear;
-
-        public Rocket _rocket;
-        public Cartridge _cartridge;
-        public List<Asteroid> _asteroidList;
-        public bool _isAsteroidDelete = false;
-        public int _asteroidToDelete;
-        public Player _player;
+        Random _random;
+         int _randomOfAppear;
+         Rocket _rocket;
+         Cartridge _cartridge;
+         List<Asteroid> _asteroidList;
+         bool _isAsteroidDelete = false;
+        int _asteroidToDelete;
+         Player _player;
         float _gameLevel;
         float _pointsToBeatLevel;
+        public PutNicknameForm _putNicknameForm;
+        Scoreboard _scoreboard;
         
         public Game()
         {
+            _putNicknameForm = new PutNicknameForm();
+            _putNicknameForm.Show();
+            
+            _scoreboard = new Scoreboard();
             _randomOfAppear = 96;
             _cartridge = new Cartridge();
             _asteroidList = new List<Asteroid>();
             _random = new Random();
             _rocket = new Rocket(_cartridge);
             _player = new Player();
-            _pointsToBeatLevel = 50;
+            _pointsToBeatLevel = 40;
+            _gameLevel = 0;
+            
             
         }
 
@@ -71,10 +78,14 @@ namespace test
         /// A function that checks the number of points and sets the current level of the game
         public void GameLevelSetup()
         {
-            if (_pointsToBeatLevel == _player._points)
+            if (_pointsToBeatLevel <= _player._points)
             {
-                _randomOfAppear -= 2;
-                _pointsToBeatLevel *= 1.5f;
+                if (_gameLevel < 10)
+                { 
+                    _randomOfAppear -= 2;
+                    _pointsToBeatLevel *= 1.6f;
+                    _gameLevel++;
+                }
             }
         }
         // BulletMovemnt Function  a function that is responsible for moving objects of the bullet class and checking for collisions
@@ -147,17 +158,21 @@ namespace test
             }
 
         }
-       public void ShowStatistic(Label points,Label ammo, Label Lifes)
+       public void ShowStatistic(Label points,Label ammo, Label Lifes,Label level)
         {
             points.Text = ($"Points:{_player._points}");
             ammo.Text = ($"Ammo:{_cartridge._amount}");
             Lifes.Text = ($"Lifes:{_player._lifes}");
+            level.Text = ($"Level {_gameLevel}");
         }
 
        public bool isGameOver()
         {
             if (_player._lifes < 1)
             {
+                string points = _player._points.ToString();
+                
+                _scoreboard.AddToScoreboard(_putNicknameForm._playerNickname,points);
                 return true;
             }
             else return false;
