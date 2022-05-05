@@ -60,14 +60,14 @@ namespace test
 
             }
         }
-        public void DrawingAsteroid(PaintEventArgs e, List<Asteroid> asteroidsList)
+      
+        public void DrawAsteroid(PaintEventArgs e, List<Asteroid> asteroidsList)
         {
             foreach (Asteroid asteroid in asteroidsList)
             {
                 asteroid.Draw(e.Graphics);
             }
         }
-
 
     }
 }

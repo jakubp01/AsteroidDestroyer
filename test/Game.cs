@@ -41,8 +41,8 @@ namespace test
 
         public void DrawwingObjects(PaintEventArgs e)
         {
-            _bulletsService.DrawingBullets(e, _cartridge);
-            _asteroidsService.DrawingAsteroid(e, _asteroidList);
+            _asteroidsService.DrawAsteroid(e, _asteroidList);
+            _bulletsService.BulletDraw(e, _cartridge);
             _rocket.Draw(e.Graphics);
         }
 

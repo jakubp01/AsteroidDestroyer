@@ -26,7 +26,7 @@ namespace test
 
         }
 
-        public void CollisonDetection(Bullet bullet)
+        public void  CollisonDetection(Bullet bullet)
         {
             var index = 0;
 

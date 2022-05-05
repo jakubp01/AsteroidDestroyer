@@ -35,7 +35,7 @@ namespace test
                     }
 
                 }
-
+                
             }
         }
 
@@ -44,7 +44,8 @@ namespace test
             bullet.y -= bullet._bulletSpeed;
             bullet._bulletSpeed += 3;
         }
-        public void DrawingBullets(PaintEventArgs e, Cartridge cartridge)
+        
+        public void BulletDraw(PaintEventArgs e, Cartridge cartridge)
         {
             foreach (var bullet in cartridge._CartridgeList)
             {
