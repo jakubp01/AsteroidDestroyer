@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace test
+﻿namespace test
 {
-    internal class Player
+    public class Player
     {
-        
+
         public int _points { get; set; }
         public int _lifes { get; set; }
-        public string _name { get; set; }
+
 
         public Player()
         {

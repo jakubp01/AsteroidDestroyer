@@ -1,30 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace test
 {
-    internal class Rocket:GameObject
+    internal class Rocket : GameObject
     {
-        
+
         Image _rocketImage;
         Cartridge _cartridge;
-        int _x=320;
+        int _x = 320;
         int _y = 650;
+        Configuration _configuration;
+
+        public delegate void RocketMove();
+
         public Rocket(Cartridge cartridge)
         {
             _rocketImage = Image.FromFile(@"Items\rocketWbg.png");
-            this.x = _x ;
+            this.x = _x;
             this.y = _y;
+            // Implement a Conifiguration class that include a properties for this class
+            _configuration = Configuration.Get();
             _cartridge = cartridge;
+
         }
         protected override void DrawObject(Graphics g)
         {
 
-           
+
             g.ScaleTransform(0.3f, 0.3f);
             g.DrawImage(_rocketImage, -_rocketImage.Width / 2, -_rocketImage.Height / 2);
             // g.DrawEllipse(Pens.Red, -200, -200, 400, 400);
@@ -32,30 +34,30 @@ namespace test
 
         public void Move(string side)
         {
-            if (side == "right")
+            if (side == "left")
             {
-                if (x < 620)
+                if (x > _configuration._windowLeftBorder)
                 {
-                    x += 12;
+                    x -= _configuration._rocketSpeed;
                 }
             }
             else
-                if (x > 50)
+                if (x < _configuration._windowRightBorder)
             {
-                x -= 12;
+                x += _configuration._rocketSpeed;
             }
         }
         public void Shoot()
         {
             if (_cartridge._amount > 0)
             {
-                Bullet bullet = new Bullet(x, y -50);
+                Bullet bullet = new Bullet(x, y - 50);
                 _cartridge._CartridgeList.Add(bullet);
                 _cartridge._amount--;
-                
+
             }
 
         }
-        
+
     }
 }

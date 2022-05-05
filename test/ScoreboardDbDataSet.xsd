@@ -37,7 +37,7 @@
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Id, Nickname, Scorepoints FROM dbo.ScoreboardDb
-Order by Scorepoints </CommandText>
+Order by Scorepoints +0 Desc</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>

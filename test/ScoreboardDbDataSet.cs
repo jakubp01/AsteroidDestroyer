@@ -7,9 +7,11 @@
     }
 }
 
-namespace test.ScoreboardDbDataSetTableAdapters {
-    
-    
-    public partial class ScoreboardDbTableAdapter {
+namespace test.ScoreboardDbDataSetTableAdapters
+{
+
+
+    public partial class ScoreboardDbTableAdapter
+    {
     }
 }

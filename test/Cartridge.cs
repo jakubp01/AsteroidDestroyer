@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace test
 {
     internal class Cartridge
     {
-        public int _amount { get;  set; }
-        
-       public List<Bullet> _CartridgeList;
+        public int _amount { get; set; }
+
+        public List<Bullet> _CartridgeList;
 
         public Cartridge()
         {
             _amount = 10;
             _CartridgeList = new List<Bullet>();
         }
-        
+
 
         public void Reload()
         {

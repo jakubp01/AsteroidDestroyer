@@ -16,3 +16,6 @@ C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Items\blt.png
 C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Items\rocketWbg.png
 C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Items\space.jpg
 C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Items\asteroid.png
+C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jakub\Desktop\Projekty\WF\test\test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jakub\Desktop\Projekty\WF\test\test\obj\Debug\test.csproj.CopyComplete

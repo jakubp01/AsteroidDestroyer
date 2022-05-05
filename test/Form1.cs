@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace test
@@ -13,7 +6,8 @@ namespace test
     public partial class GameForm : Form
     {
         Game _game;
-       
+        StatisticService _statisticService;
+
         public GameForm()
         {
             InitializeComponent();
@@ -23,10 +17,12 @@ namespace test
         {
             BackToMenubtn.Hide();
             _game = new Game();
-            
+            _statisticService = new StatisticService(pointsLabel, ammoLabel, LifesCounterLabel, LevelLabel);
+
+
         }
 
-        private void moveTimer_Tick(object sender, EventArgs e)
+        private async void moveTimer_Tick(object sender, EventArgs e)
         {
             if (_game._putNicknameForm.isOpen)
             {
@@ -39,11 +35,12 @@ namespace test
                     BackToMenubtn.Show();
                     moveTimer.Stop();
                 }
-                _game.ShowStatistic(pointsLabel, ammoLabel, LifesCounterLabel,LevelLabel);
+
+                _statisticService.ShowStatistic(_game._player, _game._gameLevel, _game._cartridge);
                 _game.GameLevelSetup();
-                _game.MakeAsteroid();
-                _game.AsteroidMovment();
-                _game.BulletMovment();
+                await _game.MakeAsteroid();
+                await _game.BulletsMovment();
+                await _game.AsteroidsMovment();
 
 
                 Invalidate();
@@ -55,9 +52,9 @@ namespace test
             _game.DrawwingObjects(e);
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private async void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            _game.RocketControl(e);
+            await _game.RocketControl(e);
         }
 
         private void BackToMenubtn_Click(object sender, EventArgs e)
